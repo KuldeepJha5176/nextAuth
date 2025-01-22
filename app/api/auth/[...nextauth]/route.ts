@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
+import AppleProvider from "next-auth/providers/apple";
 
 const handler = NextAuth({
      providers: [
@@ -38,6 +39,10 @@ const handler = NextAuth({
     GitHubProvider({
       clientId: "yftdrfsd",
       clientSecret: "utyrfd"
+    }),
+    AppleProvider({
+      clientId: "aabbxc",
+      clientSecret: "aabbxc"
     })
   ],
   secret : process.env.NEXTAUTH_SECRET
